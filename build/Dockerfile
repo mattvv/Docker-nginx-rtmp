@@ -35,7 +35,7 @@ RUN	apk update		&&	\
 
 RUN	cd /tmp/									&&	\
 	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz			&&	\
-	git clone https://github.com/arut/nginx-rtmp-module.git
+	git clone https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git
 
 RUN	cd /tmp										&&	\
 	tar xzf nginx-${NGINX_VERSION}.tar.gz						&&	\
@@ -68,4 +68,3 @@ RUN	cd /opt/ 	&&	\
 EXPOSE 1935
 
 CMD ["/opt/nginx/sbin/nginx", "-g", "daemon off;"]
-
